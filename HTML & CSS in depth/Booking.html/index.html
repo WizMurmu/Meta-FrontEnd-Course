@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Little Lemon</title>
+
+  <meta property="og:title" content="Our Menu">
+  <meta property="og:type"  content="website">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url"   content="https://littlelemon/">
+  <meta property="og:description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Little Lemon">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="./Menu.html">Menu</a> |
+    <a href="/css/">CSS</a> |
+    <a href="/js/">JavaScript</a> |
+    <a href="/python/">Python</a>
+  </nav>  
+  <header>
+    <img src="/Form/logo.png">
+  </header>
+  <main>
+    <form method="POST">
+    <h1>Book a table</h1>
+    <div>
+        <label for="bookin_date">Booking date : </label>
+        <input type="date" id="bookin_date" name="booking_date"><br>
+    </div>
+    <div>
+        <label for="booking_people">Booking for : </label>
+        <input type="range" id="booking_people" name="booking_people" min="1" max="10" oninput="this.nextElementSibling.value=this.value">
+        <!-- This line helps to display the value in the slider -->
+        <output>4</output>
+        </div>
+    <div>
+        <label for="booking_location">Booking location : </label>
+        <input id="booking_location" name="booking_location" list="locations">
+        <datalist id="locations">
+            <option value="Kolkata"></option>
+            <option value="Durgapur"></option>
+            <option value="Delhi"></option>
+        </datalist>
+    </div>
+    <div>
+        <input type="checkbox" id="cp" name="cp" required>
+        <label for="cp">I agree to the cancellation policy</label>
+      </div>
+      <button>Book Now</button>
+    </form>
+  </main>
+</body>
+
+</html>
